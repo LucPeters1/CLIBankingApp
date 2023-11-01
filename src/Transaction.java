@@ -6,11 +6,11 @@ public class Transaction {
     private String type;
     private int accountNumber;
 
-    public Date getTimeStamp(){
+    public Date getTimeStamp() {
         return timeStamp;
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 
@@ -18,7 +18,7 @@ public class Transaction {
         return amount;
     }
 
-    public int getAccountNumber(){
+    public int getAccountNumber() {
         return accountNumber;
     }
 }

@@ -12,7 +12,8 @@ public class BankApp {
 
         mainMenu();
     }
-    public static void mainMenu(){
+
+    public static void mainMenu() {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -39,7 +40,8 @@ public class BankApp {
             }
         } while (choice != 3);
     }
-    public static void createUserProfile(Scanner scanner){
+
+    public static void createUserProfile(Scanner scanner) {
         System.out.println("Enter your name: ");
         String name = scanner.next();
         System.out.println("Enter your address: ");
@@ -56,17 +58,17 @@ public class BankApp {
         System.out.println("Your user ID is: " + userID);
     }
 
-    public static void accessUserProfile(Scanner scanner){
+    public static void accessUserProfile(Scanner scanner) {
         System.out.println("Enter your user ID: ");
         int userID = scanner.nextInt();
         User user = myBank.getUser(userID);
-        if(user == null){
+        if (user == null) {
             System.out.println("User not found!");
             return;
         }
         System.out.println("Enter your pin: ");
         int pin = scanner.nextInt();
-        if(!user.verifyPin(pin)){
+        if (!user.verifyPin(pin)) {
             System.out.println("Incorrect pin!");
             return;
         }

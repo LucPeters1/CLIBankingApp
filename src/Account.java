@@ -12,36 +12,36 @@ public class Account {
 
     private int pin;
 
-    public void deposit(double amount){
+    public void deposit(double amount) {
         balance += amount;
     }
 
-    public void withdraw(double amount){
+    public void withdraw(double amount) {
         balance -= amount;
     }
 
-    public double getBalance(){
+    public double getBalance() {
         return balance;
     }
 
-    public int getAccountNumber(){
+    public int getAccountNumber() {
         return accountNumber;
     }
 
-    public User getUser(){
+    public User getUser() {
         return user;
     }
 
-    public boolean verifyPin(int enteredPin){
+    public boolean verifyPin(int enteredPin) {
         return this.pin == enteredPin;
     }
 
-    public void setPin(int pin){
+    public void setPin(int pin) {
         this.pin = pin;
     }
 
-    public void changePin(int oldPin, int newPin){
-        if(verifyPin(oldPin)){
+    public void changePin(int oldPin, int newPin) {
+        if (verifyPin(oldPin)) {
             setPin(newPin);
         } else {
             System.out.println("Incorrect pin");

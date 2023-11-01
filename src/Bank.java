@@ -10,7 +10,7 @@ public class Bank {
 
     private static int nextUserID = 1000;
 
-    public static int generateUserID(){
+    public static int generateUserID() {
         return nextUserID++;
     }
 
@@ -20,58 +20,58 @@ public class Bank {
 
     }
 
-    public void addATM(ATM atm){
+    public void addATM(ATM atm) {
         atmList.add(atm);
     }
 
-    public void removeATM(ATM atm){
+    public void removeATM(ATM atm) {
         atmList.remove(atm);
     }
 
-    public ATM getATM(int atmID){
-        for(ATM atm : atmList){
-            if(atm.getATMID() == atmID){
+    public ATM getATM(int atmID) {
+        for (ATM atm : atmList) {
+            if (atm.getATMID() == atmID) {
                 return atm;
             }
         }
         return null;
     }
 
-    public void addAccount(Account account){
+    public void addAccount(Account account) {
         accountList.add(account);
     }
 
-    public void removeAccount(Account account){
+    public void removeAccount(Account account) {
         accountList.remove(account);
     }
 
-    public Account getAccount(int accountNumber){
-        for(Account account : accountList){
-            if(account.getAccountNumber() == accountNumber){
+    public Account getAccount(int accountNumber) {
+        for (Account account : accountList) {
+            if (account.getAccountNumber() == accountNumber) {
                 return account;
             }
         }
         return null;
     }
 
-    public void addUser(User user){
+    public void addUser(User user) {
         userList.add(user);
     }
 
-    public void deleteUser(User user){
+    public void deleteUser(User user) {
         userList.remove(user);
     }
 
-    public User getUser(int userID){
-        for(User user : userList){
-            if(user.getUserID() == userID){
+    public User getUser(int userID) {
+        for (User user : userList) {
+            if (user.getUserID() == userID) {
                 return user;
             }
         }
         return null;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 }

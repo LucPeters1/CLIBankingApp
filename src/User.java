@@ -20,68 +20,70 @@ public class User {
         this.pin = pin;
     }
 
-    public void addAccount(Account account){
+    public void addAccount(Account account) {
         accounts.add(account);
     }
-    public void removeAccount(Account account){
+
+    public void removeAccount(Account account) {
         accounts.remove(account);
     }
 
     // Loops over the account List, for each account, check if the account number matches the account number passed in
-    public Account getAccount(int accountNumber){
-        for(Account account : accounts){
-            if(account.getAccountNumber() == accountNumber){
+    public Account getAccount(int accountNumber) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber() == accountNumber) {
                 return account;
             }
         }
         return null;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getAddress(){
+    public String getAddress() {
         return address;
     }
 
-    public String getPhoneNumber(){
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public int getUserID(){
+    public int getUserID() {
         return userID;
     }
 
-    public boolean verifyPin(int enteredPin){
+    public boolean verifyPin(int enteredPin) {
         return this.pin == enteredPin;
     }
 
-    public void setPin(int pin){
+    public void setPin(int pin) {
         this.pin = pin;
     }
 
-    public void changePin(int oldPin, int newPin){
-        if(verifyPin(oldPin)){
+    public void changePin(int oldPin, int newPin) {
+        if (verifyPin(oldPin)) {
             setPin(newPin);
         } else {
             System.out.println("Incorrect pin");
         }
     }
-    public void deposit(double amount){
+
+    public void deposit(double amount) {
         balance += amount;
     }
 
-    public void withdraw(double amount){
+    public void withdraw(double amount) {
         //check if amount is greater than balance
-        if(amount > balance){
+        if (amount > balance) {
             System.out.println("Insufficient funds");
             return;
         }
         balance -= amount;
     }
 
-    public double getBalance(){
+    public double getBalance() {
         return balance;
     }
 
